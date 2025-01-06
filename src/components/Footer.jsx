@@ -90,11 +90,7 @@ export default function Footer() {
 
       {/* <!--Copyright section--> */}
       <div className="bg-white p-6 text-black text-center">
-        <span>© 2025 Copyright :</span>
-        <a
-          className="font-semibold text-black"
-          href="d"
-        >HED Motors</a>
+      Copyright © 2025 HED Motors
       </div>
     </footer>
   );

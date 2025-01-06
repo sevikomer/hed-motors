@@ -13,22 +13,22 @@ import {
   PopoverPanel,
 } from '@headlessui/react'
 import {
-  ArrowPathIcon,
+  LinkIcon,
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
+  WrenchIcon,
+  ChartBarIcon,
+  CogIcon,
+  BeakerIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const prestations = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'Entretien', description: 'Prenez soin de ce qui compte, nous prenons soin du reste.', href: '/prestations/entretien', icon: WrenchIcon },
+  { name: 'Diagnostic', description: 'Comprendre pour mieux agir : votre diagnostic en un clic.', href: '/prestations/diagnostic', icon: ChartBarIcon },
+  { name: 'Diagnostic moteur', description: 'Détecter, analyser, optimiser : tout pour votre moteur.', href: '/prestations/diagnostic-moteur', icon: CogIcon },
+  { name: 'Vidange BVA', description: 'Fluidité et performance : offrir le meilleur à votre BVA.', href: '/prestations/vidange-bva', icon: BeakerIcon },
+  { name: 'Chaîne de distribution', description: 'Préservez la cadence : votre chaîne de distribution en toute sécurité.', href: '/prestations/distribution', icon: LinkIcon },
 ]
 
 export default function Header() {
@@ -66,23 +66,23 @@ export default function Header() {
 
             <PopoverPanel
               transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-grey shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="p-4">
                 {prestations.map((item) => (
                   <div
                     key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-dark-blue"
                   >
-                    <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-indigo-600" />
+                    <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-grey group-hover:bg-black">
+                      <item.icon aria-hidden="true" className="size-6 text-white " />
                     </div>
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-white">
+                      <Link to={item.href} className="block font-semibold text-white">
                         {item.name}
                         <span className="absolute inset-0" />
-                      </a>
-                      <p className="mt-1 text-gray-600">{item.description}</p>
+                      </Link>
+                      <p className="mt-1 text-white hover:text-grey">{item.description}</p>
                     </div>
                   </div>
                 ))}
@@ -131,7 +131,7 @@ export default function Header() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-white hover:bg-gray-50 hover:text-grey">
+                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-white hover:bg-dark-blue">
                     Nos prestations
                     <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-[open]:rotate-180" />
                   </DisclosureButton>
@@ -141,7 +141,7 @@ export default function Header() {
                         key={item.name}
                         as="a"
                         href={item.href}
-                        className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white hover:bg-gray-50 hover:text-grey"
+                        className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white hover:bg-dark-blue"
                       >
                         {item.name}
                       </DisclosureButton>
@@ -149,12 +149,12 @@ export default function Header() {
                   </DisclosurePanel>
                 </Disclosure>
                 <Link to="/realisations"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-50 hover:text-grey"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-dark-blue"
                 >
                   Nos réalisations
                 </Link>
                 <Link to="/tarifs"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-50 hover:text-grey"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-dark-blue"
                 >
                   Nos tarifs
                 </Link>

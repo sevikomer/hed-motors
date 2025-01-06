@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { ChevronDownIcon } from '@heroicons/react/16/solid'
 import { Field, Label, Switch } from '@headlessui/react'
 import Pagetitle from '../components/Pagetitle';
 

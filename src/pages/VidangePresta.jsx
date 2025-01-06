@@ -2,13 +2,13 @@ import React from 'react'
 import Pagetitle from '../components/Pagetitle'
 import ContactUs from '../components/ContactUs'
 
-const Réalisations = () => {
+const VidangePresta = () => {
   return (
     <div>
-      <Pagetitle title="Nos réalisations" />
-      <ContactUs />
+        <Pagetitle title="Vidange BVA" />
+        <ContactUs />
     </div>
   )
 }
 
-export default Réalisations
+export default VidangePresta

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import WhyUs from '../components/WhyUs';
 
 const Home = () => {
   return (
@@ -34,6 +35,7 @@ const Home = () => {
             />
       </div>
     </div>
+    <WhyUs />
     </>
   )
 }

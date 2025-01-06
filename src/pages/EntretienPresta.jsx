@@ -2,13 +2,13 @@ import React from 'react'
 import Pagetitle from '../components/Pagetitle'
 import ContactUs from '../components/ContactUs'
 
-const Réalisations = () => {
+const EntretienPresta = () => {
   return (
     <div>
-      <Pagetitle title="Nos réalisations" />
-      <ContactUs />
+        <Pagetitle title="Entretien" />
+        <ContactUs />
     </div>
   )
 }
 
-export default Réalisations
+export default EntretienPresta
