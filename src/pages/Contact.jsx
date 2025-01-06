@@ -3,12 +3,16 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { ChevronDownIcon } from '@heroicons/react/16/solid'
 import { Field, Label, Switch } from '@headlessui/react'
+import Pagetitle from '../components/Pagetitle';
 
 export default function Contact() {
   const [agreed, setAgreed] = useState(false)
 
   return (
+    <>
+    <Pagetitle title="Contactez-nous" />
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+     
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -16,6 +20,7 @@ export default function Contact() {
         
       </div>
       <div className="mx-auto max-w-2xl text-center">
+      
         <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">Contactez-nous</h2>
         <p className="mt-2 text-lg/8">Détaillez votre demande et nous vous recontacterons dans les plus brefs délais.</p>
       </div>
@@ -58,6 +63,7 @@ export default function Contact() {
                 id="immatriculation"
                 name="immatriculation"
                 type="text"
+                placeholder="AA-123-AA"
                 autoComplete="organization"
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-light-blue"
               />
@@ -83,17 +89,10 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <div className="flex rounded-md bg-white outline outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
-                <div className="grid shrink-0 grid-cols-1 focus-within:relative">
-                  <ChevronDownIcon
-                    aria-hidden="true"
-                    className="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
-                  />
-                </div>
                 <input
                   id="phone-number"
                   name="phone-number"
-                  type="text"
-                  placeholder="123-456-7890"
+                  type="tel"
                   className="block min-w-0 grow py-1.5 pl-1 pr-3 text-base placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
                 />
               </div>
@@ -142,5 +141,6 @@ export default function Contact() {
         </div>
       </form>
     </div>
+    </>
   )
 }

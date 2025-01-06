@@ -1,8 +1,11 @@
 import React from 'react'
+import Pagetitle from '../components/Pagetitle'
 
 const Réalisations = () => {
   return (
-    <div>Réalisations</div>
+    <div>
+      <Pagetitle title="Nos réalisations" />
+    </div>
   )
 }
 
