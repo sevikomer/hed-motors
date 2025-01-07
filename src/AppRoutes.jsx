@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home.jsx'
 import Realisations from './pages/Réalisations.jsx'
 import Prestations from './pages/Prestations.jsx'
@@ -7,7 +7,6 @@ import Tarifs from './pages/Tarifs.jsx'
 import Contact from './pages/Contact.jsx'
 import LegalMentions from './pages/LegalMentions.jsx'
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
-import CookieGestion from './pages/CookieGestion.jsx'
 import EntretienPresta from './pages/EntretienPresta.jsx'
 import DiagnosticPresta from './pages/DiagnosticPresta.jsx'
 import DiagMoteurPresta from './pages/DiagMoteurPresta.jsx'
@@ -18,7 +17,7 @@ function AppRoutes() {
 
 
   return (
-    <div>
+    <div className='lg:pt-28 pt-36'>
       <Routes>
         <Route path="/" Component={Home} />
         <Route path="/realisations" element={<Realisations />} />
@@ -32,7 +31,6 @@ function AppRoutes() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/mentions-legales" element={<LegalMentions />} />
         <Route path="/politique-confidentialite" element={<PrivacyPolicy />} />
-        <Route path="/gestion-cookies" element={<CookieGestion />} />
       </Routes>
     </div>
   )

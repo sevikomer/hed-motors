@@ -13,7 +13,7 @@ module.exports = {
         'black': '#000000',
         'grey': '#1c2939',
       },
-      fontFamily: {
+      font: {
         sans: ['Roboto', 'sans-serif'],
       },
     },

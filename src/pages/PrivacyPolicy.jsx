@@ -46,7 +46,7 @@ const PrivacyPolicy = () => {
         <h2 className="text-lg font-semibold">5. Cookies</h2>
         <p>
           Nous utilisons des cookies pour améliorer votre expérience utilisateur. Vous pouvez configurer vos préférences en 
-          visitant notre <a href="/gestion-cookies" className="text-blue-500 underline">page de gestion des cookies</a>.
+          visitant notre page de gestion des cookies.
         </p>
       </section>
 

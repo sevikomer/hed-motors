@@ -4,6 +4,10 @@ body {
   overflow-x: hidden;
 }
 
+#axeptio_overlay {
+  display: block !important;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

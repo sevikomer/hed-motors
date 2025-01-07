@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const ContactUs = () => {
   return (
-    <div className='bg-dark-blue text-white lg:m-16 m-4 rounded-3xl flex items-center place-content-center p-16'>
+    <div className='bg-dark-blue font-sans text-white lg:m-16 m-4 rounded-3xl flex items-center place-content-center p-16'>
         <div>
             <div className='font-semibold text-4xl text-start'>
                 Demandez votre devis sur mesure ! 

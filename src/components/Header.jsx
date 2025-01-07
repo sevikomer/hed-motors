@@ -35,7 +35,11 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-grey">
+    <header
+        className={`bg-grey fixed top-0 left-0 w-full z-50 shadow-md transition-transform ${
+          mobileMenuOpen ? 'invisible' : 'visible'
+        }`}
+      >
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
@@ -58,7 +62,7 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <Popover className="relative">
+          <Popover className="relative" >
             <PopoverButton className="flex items-center gap-x-1 font-semibold text-white hover:text-dark-blue">
               Nos prestations
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
@@ -110,7 +114,7 @@ export default function Header() {
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-grey px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link to="/" className="-m-1.5 p-1.5">
+            <Link to="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
               <span className="sr-only">HED Motors</span>
               <img
               alt="logo"
@@ -142,6 +146,7 @@ export default function Header() {
                         as="a"
                         href={item.href}
                         className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white hover:bg-dark-blue"
+                        onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.name}
                       </DisclosureButton>
@@ -150,11 +155,13 @@ export default function Header() {
                 </Disclosure>
                 <Link to="/realisations"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-dark-blue"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Nos réalisations
                 </Link>
                 <Link to="/tarifs"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-dark-blue"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Nos tarifs
                 </Link>
@@ -162,6 +169,7 @@ export default function Header() {
               <div className="py-6">
                 <Link to="contact"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold bg-light-blue text-white shadow-sm hover:bg-dark-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Demandez votre devis
                 </Link>

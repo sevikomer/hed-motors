@@ -56,11 +56,6 @@ export default function Footer() {
               Confidentialité
               </Link>
             </p>
-            <p className="mb-4">
-            <Link to="/gestion-cookies" className="text-white hover:text-dark-blue">
-              Gestion des cookies
-              </Link>
-            </p>
           </div>
           {/* <!-- Contact section --> */}
           <div className=''>

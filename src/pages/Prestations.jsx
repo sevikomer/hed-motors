@@ -41,9 +41,9 @@ const Prestations = () => {
                     </div>
                     <div className='flex justify-around my-12'>
                     <Link to={item.href}
-                                    className="flex justify-center mx-2 rounded-3xl bg-red px-3 py-1.5 lg:text-lg font-semibold text-white text-center shadow-sm hover:bg-rose-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
+                                    className="flex justify-center px-3 py-1.5 lg:text-lg font-semibold hover:underline text-red"
                                   >
-                                    En savoir plus
+                                    En savoir plus <span > &rarr;</span>
                                   </Link>
                     <Link to="/contact"
                                     className="flex justify-center mx-2 rounded-3xl bg-light-blue px-3 py-1.5 lg:text-lg font-semibold text-white text-center shadow-sm hover:bg-dark-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
