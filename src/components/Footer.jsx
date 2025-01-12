@@ -24,7 +24,7 @@ export default function Footer() {
               className="h-40 w-64"
             />
             <Link to="/contact"
-                className="mx-12 rounded-3xl bg-light-blue px-3 py-1.5 font-semibold text-white shadow-sm hover:bg-dark-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="mx-12 rounded-3xl bg-light-blue px-6 py-1.5 font-semibold text-white shadow-sm hover:bg-dark-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Contactez-nous
               </Link>
