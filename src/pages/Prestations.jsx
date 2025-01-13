@@ -9,34 +9,37 @@ import {
   BeakerIcon,
 } from '@heroicons/react/24/outline'
 import ContactUs from '../components/ContactUs';
+import prestations from '../data/prestations.json';
+
+const iconMap = {
+  WrenchIcon: WrenchIcon,
+  ChartBarIcon: ChartBarIcon,
+  CogIcon: CogIcon,
+  BeakerIcon: BeakerIcon,
+  LinkIcon: LinkIcon,
+};
 
 const Prestations = () => {
-
-  const prestations = [
-    { name: 'Entretien', description: 'Prenez soin de ce qui compte, nous prenons soin du reste.', href: '/prestations/entretien', icon: WrenchIcon },
-    { name: 'Diagnostic', description: 'Comprendre pour mieux agir : votre diagnostic en un clic.', href: '/prestations/diagnostic', icon: ChartBarIcon },
-    { name: 'Diagnostic moteur', description: 'Détecter, analyser, optimiser : tout pour votre moteur.', href: '/prestations/diagnostic-moteur', icon: CogIcon },
-    { name: 'Vidange BVA', description: 'Fluidité et performance : offrir le meilleur à votre BVA.', href: '/prestations/vidange-bva', icon: BeakerIcon },
-    { name: 'Chaîne de distribution', description: 'Préservez la cadence : votre chaîne de distribution en toute sécurité.', href: '/prestations/distribution', icon: LinkIcon },
-  ]
 
   return (
     <>
        <Pagetitle title="Nos prestations" />
-       <div className="p-4">
-                {prestations.map((item) => (
+       <div className="">
+                {prestations.map((item) => {
+                  const IconComponent = iconMap[item.icon];
+                  return (
                   <div
                     key={item.name}
-                    className=" grid lg:grid-cols-2 grid-cols-1 lg:m-16 m-4 bg-slate-100 rounded-3xl lg:p-16 p-6"
+                    className=" grid lg:grid-cols-2 grid-cols-1 lg:m-16 m-4 bg-white rounded-lg border border-gray-100 shadow lg:p-16 p-6"
                   >
-                    <div className='flex justify-center'>
+                    <div className='flex items-center justify-center'>
                     <div className="flex h-32 w-32 items-center justify-center rounded-2xl bg-grey group-hover:bg-black text-white">
-                      <item.icon aria-hidden="true" className="size-11" />
+                    {IconComponent && <IconComponent className="h-12 w-12" />}
                     </div>
                     </div>
                     <div>
                     <div className="flex-auto p-4">
-                      <div className='text-2xl font-bold text-center'>{item.name}</div>
+                      <div className='text-2xl font-bold text-center mb-1'>{item.name}</div>
                       <p className="mt-1 text-center hover:text-grey">{item.description}</p>
                     </div>
                     <div className='grid lg:grid-cols-2 md:grid-cols-1 place-content-center my-6'>
@@ -53,7 +56,7 @@ const Prestations = () => {
                           </div>
                   </div>
                   </div>
-                ))}
+               ) })}
               </div>
               <ContactUs />
     </>

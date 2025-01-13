@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Entretien",
+    "accroche": "Prenez soin de ce qui compte, nous prenons soin du reste.",
+    "description": "Nos interventions en entretien garantissent la longévité et les performances de votre véhicule. Du simple contrôle aux révisions complètes, chaque tâche est réalisée avec soin et expertise. Nous utilisons des pièces de qualité et des outils adaptés pour que votre véhicule reste en parfait état, kilomètre après kilomètre.",
+    "href": "/prestations/entretien",
+    "icon": "WrenchIcon"
+  },
+  {
+    "name": "Diagnostic",
+    "accroche": "Comprendre pour mieux agir : votre diagnostic en un clic.",
+    "description": "Nos diagnostics permettent d’identifier rapidement les anomalies de votre véhicule, qu’il s’agisse d’un voyant moteur, d’un bruit inhabituel ou d’un problème de performance. Grâce à nos équipements de pointe, nous effectuons une analyse complète et précise pour vous fournir un rapport détaillé et des solutions adaptées.",
+    "href": "/prestations/diagnostic",
+    "icon": "ChartBarIcon"
+  },
+
+  {
+    "name": "Vidange BVA",
+    "accroche": "Fluidité et performance : offrir le meilleur à votre BVA.",
+    "description": "La vidange de boîte de vitesses automatique (BVA) est une opération essentielle pour préserver fluidité et performance. Nous effectuons des vidanges selon les normes du constructeur, en remplaçant l'huile par des fluides adaptés et en vérifiant l'ensemble des composants pour garantir une conduite optimale.",
+    "href": "/prestations/vidange-bva",
+    "icon": "BeakerIcon"
+  },
+  {
+    "name": "Chaîne de distribution",
+    "accroche": "Préservez la cadence : votre chaîne de distribution en toute sécurité.",
+    "description": "Changer une chaîne de distribution demande précision et savoir-faire. Nos réalisations témoignent de notre expertise : démontage minutieux, remplacement avec des pièces d'origine ou équivalentes, et réglages précis. Votre moteur est entre de bonnes mains pour continuer à fonctionner en toute sécurité et efficacité.",
+    "href": "/prestations/distribution",
+    "icon": "LinkIcon"
+  }
+]

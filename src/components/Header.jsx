@@ -22,14 +22,15 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import prestations from '../data/prestations.json';
 
-const prestations = [
-  { name: 'Entretien', description: 'Prenez soin de ce qui compte, nous prenons soin du reste.', href: '/prestations/entretien', icon: WrenchIcon },
-  { name: 'Diagnostic', description: 'Comprendre pour mieux agir : votre diagnostic en un clic.', href: '/prestations/diagnostic', icon: ChartBarIcon },
-  { name: 'Diagnostic moteur', description: 'Détecter, analyser, optimiser : tout pour votre moteur.', href: '/prestations/diagnostic-moteur', icon: CogIcon },
-  { name: 'Vidange BVA', description: 'Fluidité et performance : offrir le meilleur à votre BVA.', href: '/prestations/vidange-bva', icon: BeakerIcon },
-  { name: 'Chaîne de distribution', description: 'Préservez la cadence : votre chaîne de distribution en toute sécurité.', href: '/prestations/distribution', icon: LinkIcon },
-]
+const iconMap = {
+  WrenchIcon: WrenchIcon,
+  ChartBarIcon: ChartBarIcon,
+  CogIcon: CogIcon,
+  BeakerIcon: BeakerIcon,
+  LinkIcon: LinkIcon,
+};
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -73,23 +74,25 @@ export default function Header() {
               className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-grey shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="p-4">
-                {prestations.map((item) => (
+                {prestations.map((item) => {
+                  const IconComponent = iconMap[item.icon];
+                  return (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-dark-blue"
                   >
                     <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-grey group-hover:bg-black">
-                      <item.icon aria-hidden="true" className="size-6 text-white " />
+                    {IconComponent && <IconComponent className="h-6 w-6 text-white" />}
                     </div>
                     <div className="flex-auto">
                       <Link to={item.href} className="block font-semibold text-white">
                         {item.name}
                         <span className="absolute inset-0" />
                       </Link>
-                      <p className="mt-1 text-white hover:text-grey">{item.description}</p>
+                      <p className="mt-1 text-white hover:text-grey">{item.accroche}</p>
                     </div>
                   </div>
-                ))}
+                )})}
               </div>
             </PopoverPanel>
           </Popover>
