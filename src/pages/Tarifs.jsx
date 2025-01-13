@@ -2,6 +2,8 @@ import React from 'react'
 import Pagetitle from '../components/Pagetitle'
 import { Link } from 'react-router-dom';
 import ContactUs from '../components/ContactUs';
+import { TagIcon } from '@heroicons/react/24/outline';
+
 
 const Tarifs = () => {
   const data = [
@@ -14,7 +16,7 @@ const Tarifs = () => {
   return (
     <>
     <div>
-      <Pagetitle title="Nos tarifs" />
+    <Pagetitle icon={<TagIcon />} title="Nos tarifs" content="Transparence et compétitivité : découvrez nos tarifs." />
       <section class="bg-white dark:bg-gray-900">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">

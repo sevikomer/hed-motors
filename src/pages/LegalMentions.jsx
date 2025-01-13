@@ -1,10 +1,11 @@
 import React from 'react';
 import Pagetitle from '../components/Pagetitle';
+import { DocumentTextIcon } from '@heroicons/react/24/outline';
 
 const LegalMentions = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <Pagetitle title="Mentions légales" />
+     <Pagetitle icon={<DocumentTextIcon />} title="Mentions légales" content="Toutes les informations légales en toute transparence." />
       <h1 className="text-2xl font-bold mb-4">Mentions Légales</h1>
 
       <section className="mb-6">

@@ -36,7 +36,7 @@ const EntretienPresta = () => {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl font-bold text-light-blue text-center m-2">
+          <h3 className="text-2xl font-bold text-dark-blue text-center m-2">
             Nos prestations d'entretien
           </h3>
           <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -56,7 +56,7 @@ const EntretienPresta = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-light-blue">
+          <h3 className="text-2xl font-bold text-dark-blue">
             Pourquoi choisir HED Motors ?
           </h3>
           <p className="mt-4">

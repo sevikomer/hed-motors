@@ -7,6 +7,7 @@ import {
   ChartBarIcon,
   CogIcon,
   BeakerIcon,
+  AdjustmentsVerticalIcon
 } from '@heroicons/react/24/outline'
 import ContactUs from '../components/ContactUs';
 import prestations from '../data/prestations.json';
@@ -23,7 +24,7 @@ const Prestations = () => {
 
   return (
     <>
-       <Pagetitle title="Nos prestations" />
+       <Pagetitle icon={<AdjustmentsVerticalIcon />} title="Nos prestations" content="Des services sur mesure pour votre véhicule." />
        <div className="">
                 {prestations.map((item) => {
                   const IconComponent = iconMap[item.icon];

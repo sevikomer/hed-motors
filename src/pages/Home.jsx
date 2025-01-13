@@ -52,7 +52,7 @@ const Home = () => {
       </div>
     </div>
     <div>
-      <h2 className='lg:text-6xl md:text-4xl text-3xl font-bold text-center pb-4'>Nos prestations</h2>
+      <h2 className='lg:text-6xl md:text-4xl text-3xl font-bold text-dark-blue text-center p-4'>Nos prestations</h2>
       <div className="grid lg:grid-cols-2 grid-cols-1">
                 {prestations.map((item) => {
                   const IconComponent = iconMap[item.icon];

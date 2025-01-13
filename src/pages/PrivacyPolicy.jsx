@@ -1,10 +1,12 @@
 import React from 'react';
 import Pagetitle from '../components/Pagetitle';
+import { LockClosedIcon } from '@heroicons/react/24/outline';
+
 
 const PrivacyPolicy = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <Pagetitle title="Politique de confidentialité" />
+      <Pagetitle icon={<LockClosedIcon />} title="Politique de confidentialité" content="Consultez notre politique de confidentialité pour plus de sécurité." />
       <h1 className="text-2xl font-bold mb-4">Politique de Confidentialité</h1>
 
       <section className="mb-6">
