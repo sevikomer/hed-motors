@@ -17,7 +17,7 @@ const Tarifs = () => {
     <>
     <div>
     <Pagetitle icon={<TagIcon />} title="Nos tarifs" content="Transparence et compétitivité : découvrez nos tarifs." />
-      <section class="bg-white dark:bg-gray-900">
+      <section class="bg-white">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
       {data.map((item) => (
