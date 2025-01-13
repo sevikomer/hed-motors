@@ -30,7 +30,7 @@ const Prestations = () => {
                     className=" grid lg:grid-cols-2 grid-cols-1 lg:m-16 m-4 bg-slate-100 rounded-3xl lg:p-16 p-6"
                   >
                     <div className='flex justify-center'>
-                    <div className="flex h-32 w-32 items-center justify-center rounded-lg bg-grey group-hover:bg-black text-white">
+                    <div className="flex h-32 w-32 items-center justify-center rounded-2xl bg-grey group-hover:bg-black text-white">
                       <item.icon aria-hidden="true" className="size-11" />
                     </div>
                     </div>

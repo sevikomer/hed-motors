@@ -43,7 +43,7 @@ export default function Footer() {
             </p>
             <p className="mb-4">
               <Link to="/tarifs" className="text-white hover:text-dark-blue">
-              Tarifs
+              Nos tarifs
               </Link>
             </p>
             <p className="mb-4">
@@ -67,7 +67,7 @@ export default function Footer() {
             <HomeIcon className="size-6 text-white py-1" />
               RD 556, Le Bary, 13650 Meyrargues
             </p>
-            <p className="mb-4 flex items-center justify-center">
+            <p className="mb-4 flex justify-center">
             <ClockIcon className="size-6 text-white py-1" />
               du Lundi au Vendredi, 08:00-12:00 / 14:00-18:00
             </p>
@@ -84,7 +84,7 @@ export default function Footer() {
       </div>
 
       {/* <!--Copyright section--> */}
-      <div className="bg-white p-6 text-black text-center">
+      <div className="bg-black p-6 text-white text-center">
       Copyright © 2025 HED Motors
       </div>
     </footer>

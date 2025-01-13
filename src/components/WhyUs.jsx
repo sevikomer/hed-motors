@@ -16,16 +16,16 @@ import {
 const WhyUs = () => {
   return (
     <div className='bg-dark-blue font-sans text-white lg:m-16 m-4 rounded-3xl items-center place-content-center p-6'>
-        <div className='font-semibold lg:text-4xl md:text-3xl text-2xl text-center pt-6'>
+        <div className='font-semibold lg:text-4xl md:text-3xl text-2xl text-center pt-6 pb-3'>
             Pourquoi nous choisir ?
         </div>
-                <div className="grid gap-12 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:m-16 my-4 items-center place-content-center">
+                <div className="grid lg:gap-12 gap-6 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:m-16 my-4 items-center place-content-center">
                 {advantages.map((item) => (
                   <div
                     key={item.description}
                     className="bg-white rounded-3xl lg:p-8 p-2 lg:text-lg  text-black"
                   >
-                    <div className="flex justify-center py-4">
+                    <div className="flex justify-center lg:py-4 py-2">
                       <item.icon aria-hidden="true" className="size-10 text-red" />
                     </div>
                     <div className="p-2">
