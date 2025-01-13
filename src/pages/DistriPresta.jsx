@@ -6,7 +6,7 @@ import { LinkIcon, WrenchIcon, ShieldCheckIcon } from '@heroicons/react/24/outli
 const DistriPresta = () => {
   return (
     <div>
-        <Pagetitle icon={<WrenchIcon />} title="Chaîne de distribution" content="Préservez la Fiabilité de Votre Moteur." />
+        <Pagetitle icon={<LinkIcon />} title="Chaîne de distribution" content="Préservez la Fiabilité de Votre Moteur." />
     <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center">
         <p className="text-lg text-gray-700 mb-8">
