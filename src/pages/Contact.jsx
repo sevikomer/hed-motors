@@ -3,15 +3,15 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Field, Label, Switch } from '@headlessui/react'
 import Pagetitle from '../components/Pagetitle';
+import { EnvelopeIcon } from '@heroicons/react/24/outline';
 
 export default function Contact() {
   const [agreed, setAgreed] = useState(false)
 
   return (
     <>
-    <Pagetitle title="Contactez-nous" />
-    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-     
+    <Pagetitle icon={<EnvelopeIcon />} title="Contactez nous" content="Nous sommes à votre écoute." />
+    <div className="isolate bg-white px-6 py-24 sm:py-32">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -23,7 +23,7 @@ export default function Contact() {
         <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">Contactez-nous</h2>
         <p className="mt-2 text-lg/8">Détaillez votre demande et nous vous recontacterons dans les plus brefs délais.</p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form action="#" method="#" className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm/6 font-semibold">
@@ -34,7 +34,7 @@ export default function Contact() {
                 id="first-name"
                 name="first-name"
                 type="text"
-                autoComplete="given-name"
+                autoComplete="family-name"
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-light-blue"
               />
             </div>
@@ -48,7 +48,7 @@ export default function Contact() {
                 id="last-name"
                 name="last-name"
                 type="text"
-                autoComplete="family-name"
+                autoComplete="given-name"
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-light-blue"
               />
             </div>
@@ -126,7 +126,7 @@ export default function Contact() {
               </Switch>
             </div>
             <Label className="text-sm/6 text-gray-600">
-            En soumettant ce formulaire j'accepte que les informations saisies soient utilisées pour apporter une réponse par mail ou par téléphone à ma demande. Pour connaître et exercer vos droits concernant vos données, veuillez consulter notre <Link to="" className="font-semibold text-light-blue"> Politique de gestion des données personnelles.</Link>
+            En soumettant ce formulaire j'accepte que les informations saisies soient utilisées pour apporter une réponse par mail ou par téléphone à ma demande. Pour connaître et exercer vos droits concernant vos données, veuillez consulter notre <Link to="/politique-confidentialite" className="font-semibold text-light-blue"> Politique de gestion des données personnelles.</Link>
             </Label>
           </Field>
         </div>
