@@ -8,6 +8,8 @@ import { EnvelopeIcon } from '@heroicons/react/24/outline';
 export default function Contact() {
   const [agreed, setAgreed] = useState(false)
 
+  //formspree à intégrer
+
   return (
     <>
     <Pagetitle icon={<EnvelopeIcon />} title="Contactez nous" content="Nous sommes à votre écoute." />

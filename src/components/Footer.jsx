@@ -63,22 +63,29 @@ export default function Footer() {
               className="mb-4 flex justify-center font-semibold uppercase">
               Contact
             </h6>
-            <p className="mb-4 flex items-center justify-center">
+            <a 
+            href="https://www.google.com/maps/dir/?api=1&destination=HED+Motors,+RD556,+LeBary,+Meyrargues,+France"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mb-4 flex items-center justify-center hover:underline">
             <HomeIcon className="size-6 text-white py-1" />
               RD 556, Le Bary, 13650 Meyrargues
-            </p>
+            </a>
             <p className="mb-4 flex justify-center">
             <ClockIcon className="size-6 text-white py-1" />
               du Lundi au Vendredi, 08:00-12:00 / 14:00-18:00
             </p>
-            <p className="mb-4 flex items-center justify-center">
+            <a href="mailto:hedmotors@gmail.com"  
+            className="mb-4 flex items-center justify-center hover:underline">
             <EnvelopeIcon className="size-6 text-white py-1" />
               hedmotors@gmail.com
-            </p>
-            <p className="mb-4 flex items-center justify-center">
+            </a>
+            <a 
+            href="tel:+33699598616"
+            className="mb-4 flex items-center justify-center hover:underline">
             <PhoneIcon className="size-6 text-white py-1" />
               06 99 59 86 16
-            </p>
+            </a>
           </div>
         </div>
       </div>
